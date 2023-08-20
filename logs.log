@@ -737,3 +737,131 @@ pickle: {'deps_info': {'pip': '23.2.1', 'setuptools': '68.0.0', 'pycaret': '3.0.
 2023-08-20 19:02:07,441:INFO:Set up encoding of categorical features.
 2023-08-20 19:02:07,443:INFO:Set up removing multicollinearity.
 2023-08-20 19:02:07,443:INFO:Set up feature normalization.
+2023-08-20 19:02:11,981:INFO:Finished creating preprocessing pipeline.
+2023-08-20 19:02:11,997:INFO:Pipeline: Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['latitude', 'longitude',
+                                             'cbd_dist', 'min_dist_mrt',
+                                             'remaining_lease',
+                                             'floor_area_sqm'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['flat_type', 'storey_range',
+                                             'flat_model', 'region'],
+                                    transformer=SimpleImputer(strategy='most...
+                 TransformerWrapper(include=['flat_type', 'storey_range',
+                                             'flat_model', 'region'],
+                                    transformer=OneHotEncoder(cols=['flat_type',
+                                                                    'storey_range',
+                                                                    'flat_model',
+                                                                    'region'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_multicollinearity',
+                 TransformerWrapper(exclude=[],
+                                    transformer=RemoveMulticollinearity(threshold=0.9))),
+                ('normalize',
+                 TransformerWrapper(transformer=StandardScaler()))])
+2023-08-20 19:02:11,997:INFO:Creating final display dataframe.
+2023-08-20 19:02:14,683:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target  log_resale_price
+2                   Target type        Regression
+3           Original data shape      (194240, 11)
+4        Transformed data shape      (194240, 56)
+5   Transformed train set shape      (155392, 56)
+6    Transformed test set shape       (38848, 56)
+7              Numeric features                 6
+8          Categorical features                 4
+9                    Preprocess              True
+10              Imputation type            simple
+11           Numeric imputation              mean
+12       Categorical imputation              mode
+13     Maximum one-hot encoding                25
+14              Encoding method              None
+15     Remove multicollinearity              True
+16  Multicollinearity threshold               0.9
+17                    Normalize              True
+18             Normalize method            zscore
+19               Fold Generator             KFold
+20                  Fold Number                10
+21                     CPU Jobs                -1
+22                      Use GPU             False
+23               Log Experiment             False
+24              Experiment Name  reg-default-name
+25                          USI              c3c6
+2023-08-20 19:02:14,886:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-08-20 19:02:14,890:INFO:Soft dependency imported: catboost: 1.2
+2023-08-20 19:02:15,077:INFO:Soft dependency imported: xgboost: 1.7.6
+2023-08-20 19:02:15,081:INFO:Soft dependency imported: catboost: 1.2
+2023-08-20 19:02:15,082:INFO:setup() successfully completed in 10.99s...............
+2023-08-20 19:02:15,205:INFO:Initializing create_model()
+2023-08-20 19:02:15,205:INFO:create_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000002A07625F700>, estimator=gbr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, kwargs={})
+2023-08-20 19:02:15,205:INFO:Checking exceptions
+2023-08-20 19:02:15,296:INFO:Importing libraries
+2023-08-20 19:02:15,296:INFO:Copying training dataset
+2023-08-20 19:02:15,385:INFO:Defining folds
+2023-08-20 19:02:15,385:INFO:Declaring metric variables
+2023-08-20 19:02:15,392:INFO:Importing untrained model
+2023-08-20 19:02:15,397:INFO:Gradient Boosting Regressor Imported successfully
+2023-08-20 19:02:15,410:INFO:Starting cross validation
+2023-08-20 19:02:15,421:INFO:Cross validating with KFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2023-08-20 19:07:28,772:INFO:Calculating mean and std
+2023-08-20 19:07:28,788:INFO:Creating metrics dataframe
+2023-08-20 19:07:28,818:INFO:Finalizing model
+2023-08-20 19:08:59,420:INFO:Uploading results into container
+2023-08-20 19:08:59,423:INFO:Uploading model into container now
+2023-08-20 19:08:59,446:INFO:_master_model_container: 1
+2023-08-20 19:08:59,446:INFO:_display_container: 2
+2023-08-20 19:08:59,447:INFO:GradientBoostingRegressor(random_state=123)
+2023-08-20 19:08:59,447:INFO:create_model() successfully completed......................................
+2023-08-20 19:09:00,364:INFO:Initializing save_model()
+2023-08-20 19:09:00,364:INFO:save_model(model=GradientBoostingRegressor(random_state=123), model_name=best_gbr__pipeline_for_render, prep_pipe_=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['latitude', 'longitude',
+                                             'cbd_dist', 'min_dist_mrt',
+                                             'remaining_lease',
+                                             'floor_area_sqm'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['flat_type', 'storey_range',
+                                             'flat_model', 'region'],
+                                    transformer=SimpleImputer(strategy='most...
+                 TransformerWrapper(include=['flat_type', 'storey_range',
+                                             'flat_model', 'region'],
+                                    transformer=OneHotEncoder(cols=['flat_type',
+                                                                    'storey_range',
+                                                                    'flat_model',
+                                                                    'region'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_multicollinearity',
+                 TransformerWrapper(exclude=[],
+                                    transformer=RemoveMulticollinearity(threshold=0.9))),
+                ('normalize',
+                 TransformerWrapper(transformer=StandardScaler()))]), verbose=True, use_case=MLUsecase.REGRESSION, kwargs={})
+2023-08-20 19:09:00,364:INFO:Adding model into prep_pipe
+2023-08-20 19:09:00,412:INFO:best_gbr__pipeline_for_render.pkl saved in current working directory
+2023-08-20 19:09:00,450:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['latitude', 'longitude',
+                                             'cbd_dist', 'min_dist_mrt',
+                                             'remaining_lease',
+                                             'floor_area_sqm'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['flat_type', 'storey_range',
+                                             'flat_model', 'region'],
+                                    transformer=SimpleImputer(strategy='most...
+                                    transformer=OneHotEncoder(cols=['flat_type',
+                                                                    'storey_range',
+                                                                    'flat_model',
+                                                                    'region'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_multicollinearity',
+                 TransformerWrapper(exclude=[],
+                                    transformer=RemoveMulticollinearity(threshold=0.9))),
+                ('normalize', TransformerWrapper(transformer=StandardScaler())),
+                ('trained_model', GradientBoostingRegressor(random_state=123))])
+2023-08-20 19:09:00,450:INFO:save_model() successfully completed......................................
