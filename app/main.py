@@ -112,7 +112,7 @@ def medical_predict():
         # print(data)
         # pipeline = pickle.load(open(medical_model_file, 'rb'))
         
-        pipeline = load_model('models\cv_issue-pipeline_testing_zx')
+        pipeline = load_model('app/cv_issue-pipeline_testing_zx')
         print(pipeline)
         # model = pickle.load(f)
         data = {
