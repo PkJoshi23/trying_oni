@@ -8,7 +8,7 @@ import joblib
 from pathlib import Path
 import os
 
-app = Flask(__name__, template_folder=r'app\templates')
+app = Flask(__name__, template_folder='templates')
 
 # model_path = r'models\my_best_pipeline'
 
@@ -112,7 +112,7 @@ def medical_predict():
         # print(data)
         # pipeline = pickle.load(open(medical_model_file, 'rb'))
         
-        pipeline = load_model('app/cv_issue-pipeline_testing_zx')
+        pipeline = load_model('cv_issue-pipeline_testing_zx')
         print(pipeline)
         # model = pickle.load(f)
         data = {
