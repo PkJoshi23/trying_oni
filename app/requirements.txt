@@ -1,6 +1,6 @@
 gunicorn
 numpy 
-pandas
+pandas == 2.0.3
 scikit-learn
 joblib
 pycaret

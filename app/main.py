@@ -11,7 +11,7 @@ import os
 app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
 
 # model_path = r'models\my_best_pipeline'
-
+print(pd.__version__)
 # # Load the entire pipeline from the saved pickle file using pycaret's load_model
 # loaded_pipeline = load_model(model_path)
 # print(loaded_pipeline)
