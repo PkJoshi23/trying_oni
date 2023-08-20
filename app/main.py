@@ -65,7 +65,7 @@ def predict():
     # Convert the input_data dictionary to a DataFrame
     input_df = pd.DataFrame([input_data])
 
-    pipeline = load_model('models\best_gbr_model_lol')
+    pipeline = load_model('models\best_gbr_model_lol.pkl')
     print(pipeline)
     # Use the loaded pipeline to make predictions using the predict_model function
     pred_df = predict_model(pipeline, data=input_df)
