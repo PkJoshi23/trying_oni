@@ -865,3 +865,62 @@ pickle: {'deps_info': {'pip': '23.2.1', 'setuptools': '68.0.0', 'pycaret': '3.0.
                 ('normalize', TransformerWrapper(transformer=StandardScaler())),
                 ('trained_model', GradientBoostingRegressor(random_state=123))])
 2023-08-20 19:09:00,450:INFO:save_model() successfully completed......................................
+2023-08-20 19:20:08,574:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:20:08,576:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:20:08,576:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:20:08,576:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:20:10,157:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-08-20 19:20:25,386:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:20:25,387:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:20:25,388:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:20:25,388:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:20:26,692:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
+2023-08-20 19:20:42,622:INFO:Initializing load_model()
+2023-08-20 19:20:42,622:INFO:load_model(model_name=app/best_gbr__pipeline_for_render, platform=None, authentication=None, verbose=True)
+2023-08-20 19:20:42,743:INFO:Initializing predict_model()
+2023-08-20 19:20:42,743:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000016619F02F10>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['latitude', 'longitude',
+                                             'cbd_dist', 'min_dist_mrt',
+                                             'remaining_lease',
+                                             'floor_area_sqm'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['flat_type', 'storey_range',
+                                             'flat_model', 'region'],
+                                    transformer=SimpleImputer(strategy='most...
+                                    transformer=OneHotEncoder(cols=['flat_type',
+                                                                    'storey_range',
+                                                                    'flat_model',
+                                                                    'region'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('remove_multicollinearity',
+                 TransformerWrapper(exclude=[],
+                                    transformer=RemoveMulticollinearity(threshold=0.9))),
+                ('normalize', TransformerWrapper(transformer=StandardScaler())),
+                ('trained_model', GradientBoostingRegressor(random_state=123))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, replace_labels_in_column=<function _SupervisedExperiment.predict_model.<locals>.replace_labels_in_column at 0x0000016619E5E1F0>)
+2023-08-20 19:20:42,744:INFO:Checking exceptions
+2023-08-20 19:20:42,744:INFO:Preloading libraries
+2023-08-20 19:20:42,745:INFO:Set up data.
+2023-08-20 19:20:42,760:INFO:Set up index.
+2023-08-20 19:21:59,400:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:21:59,403:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:21:59,404:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:21:59,404:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-20 19:22:01,233:WARNING:
+'prophet' is a soft dependency and not included in the pycaret installation. Please run: `pip install prophet` to install.
