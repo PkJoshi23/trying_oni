@@ -8,7 +8,7 @@ import joblib
 from pathlib import Path
 import os
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 
 # model_path = r'models\my_best_pipeline'
 
