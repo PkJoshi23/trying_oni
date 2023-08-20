@@ -52,7 +52,7 @@ def predict():
     input_data = {
         'floor_area_sqm': float(floor_area_sqm),
         'latitude': float(latitude),
-        'longitude': float(longitude),
+        'longitude': longitude,
         'cbd_dist': float(cbd_dist),
         'min_dist_mrt': float(min_dist_mrt),
         'remaining_lease': float(remaining_lease),
@@ -65,7 +65,7 @@ def predict():
     # Convert the input_data dictionary to a DataFrame
     input_df = pd.DataFrame([input_data])
 
-    pipeline = load_model('best_gbr_model_lol')
+    pipeline = load_model('best_gbr__pipeline_for_render')
     print(pipeline)
     # Use the loaded pipeline to make predictions using the predict_model function
     pred_df = predict_model(pipeline, data=input_df)
