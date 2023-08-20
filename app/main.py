@@ -21,6 +21,7 @@ print(pd.__version__)
 @app.route('/')
 def home():
     return render_template('home.html')
+    print(pd.__version__)
 
 @app.route('/parik')
 def parik():
